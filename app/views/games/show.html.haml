@@ -1,0 +1,18 @@
+- title "Game"
+
+%p
+  %strong Game Date:
+  = @game.game_date
+%p
+  %strong Opponent:
+  = @game.opponent
+%p
+  %strong Home Away:
+  = @game.home_away
+
+%p
+  = link_to "Edit", edit_game_path(@game)
+  |
+  = link_to "Destroy", @game, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", games_path

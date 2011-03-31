@@ -1,0 +1,16 @@
+= form_for @game do |f|
+  = f.error_messages
+  %p
+    = f.label :game_date
+    %br
+    = f.datetime_select :game_date
+  %p
+    = f.label :opponent
+    %br
+    = f.text_field :opponent
+  %p
+    = f.label :home_away
+    %br
+    = f.text_field :home_away
+  %p
+    = f.submit
