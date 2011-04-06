@@ -13,7 +13,15 @@
   %body
     #container
       #menu
-        = image_tag("logo.jpg")
+        #logo
+          = image_tag("logo-3.jpg")
+        #nav
+          = link_to("Blog", "#")
+          = link_to("Forums", "#")
+          = link_to("Chat", "#")
+          = link_to("Profile", "#")
+          = link_to("Schedule", "#")                
+          = link_to("Bulls Feed", "#")
         
       #main_content
         - flash.each do |name, msg|

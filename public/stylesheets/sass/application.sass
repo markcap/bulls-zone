@@ -1,7 +1,10 @@
-$primary_color: #F2ECEF
-
+$bg_color: #F2ECEF
+$primary_color: #d70039
+$secondary_color: black
+$third_color: white
+$fourth_color: #990227
 body
-  background-color: $primary_color
+  background-color: $bg_color
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -23,12 +26,59 @@ a
   background: white
   border: solid 1px black
 
+
+
 #menu
-  padding: 0px
+  // padding: 5px 10px
+  border-bottom: 1px solid $secondary_color
+
+#logo 
+  margin-bottom: -10px
+  display: inline
+  
+#nav 
+  padding: 5px 20px
+  display: inline
+  margin-bottom: 10px
+  
+  a
+    margin: 0 
+    display: inline-block
+    cursor: pointer
+    text-decoration: none
+    border-style: solid
+    font-weight: bold
+    border-radius: 6px
+    -moz-border-radius: 6px
+    -webkit-border-radius: 6px
+    padding: 6px 14px
+    font-size: 14px
+    line-height: 12px
+    border-width: 2px
+    color: $third_color
+    background-color: $primary_color
+    border-color: $secondary_color
+    &:hover, &:active
+      background-color: $fourth_color
+      
+    ::-moz-focus-inner 
+      border: none
+      padding: 0
+    focus
+      outline: none
+    disabled:active
+      padding: 2px 8px  
+      border-width: 1px
+      
+
+    // hover, .tiny-button:focus { text-decoration: none; cursor: pointer; color: #fff; background-color: #85abd9; background: -webkit-gradient(linear, left top, left bottom, from(#aee595), to(#59b82d), color-stop(0.1, #76d34b), color-stop(0.5, #4b9b26), color-stop(0.5, #458f23)); background: -moz-linear-gradient(left top, left bottom, from(#aee595), to(#59b82d), color-stop(0.1, #76d34b), color-stop(0.5, #4b9b26), color-stop(0.5, #458f23)); border-color: #4379b9; }
+    // active {  padding: 1px 7px; border-width: 2px; color: #fff; background-color: #4379b9; background: -webkit-gradient(linear, left top, left bottom, from(#a4e288), to(#53ab2a), color-stop(0.1, #6cd03e), color-stop(0.5, #458e23), color-stop(0.5, #3f8220)); background: -moz-linear-gradient(left top, left bottom, from(#a4e288), to(#53ab2a), color-stop(0.1, #6cd03e), color-stop(0.5, #458e23), color-stop(0.5, #3f8220)); }
+
+    margin-right: 10px
 
 #main_content
   padding: 20px 40px
-
+  
 #flash_notice,
 #flash_error,
 #flash_alert
