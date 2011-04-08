@@ -26,72 +26,75 @@ a img {
 #container {
   width: 960px;
   margin: 0 auto;
+  margin-top: 60px;
   background: white;
   border: solid 1px black;
 }
 
-/* line 31, sass/application.sass */
-#menu {
+/* line 30, sass/application.sass */
+#navbar {
   border-bottom: 1px solid black;
+  width: 100%;
+  background-color: #d70039;
+  height: 40px;
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
 }
 
-/* line 35, sass/application.sass */
+/* line 41, sass/application.sass */
+#navbar_content {
+  margin-left: 240px;
+  padding-top: 3px;
+}
+
+/* line 45, sass/application.sass */
 #logo {
-  margin-bottom: -10px;
-  display: inline;
+  float: left;
 }
 
-/* line 39, sass/application.sass */
+/* line 48, sass/application.sass */
 #nav {
-  padding: 5px 20px;
-  display: inline;
-  margin-bottom: 10px;
+  padding: 4px 20px;
 }
-/* line 44, sass/application.sass */
+/* line 51, sass/application.sass */
 #nav a {
   margin: 0;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  border-style: solid;
   font-weight: bold;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  padding: 6px 14px;
-  font-size: 14px;
-  line-height: 12px;
-  border-width: 2px;
-  color: white;
-  background-color: #d70039;
-  border-color: black;
+  color: black;
+  padding-right: 15px;
+  padding: 3px 11px;
   margin-right: 10px;
 }
-/* line 61, sass/application.sass */
+/* line 70, sass/application.sass */
 #nav a:hover, #nav a:active {
-  background-color: #990227;
+  color: white;
 }
-/* line 64, sass/application.sass */
+/* line 74, sass/application.sass */
 #nav a ::-moz-focus-inner {
   border: none;
   padding: 0;
 }
-/* line 67, sass/application.sass */
+/* line 77, sass/application.sass */
 #nav a focus {
   outline: none;
 }
-/* line 69, sass/application.sass */
+/* line 79, sass/application.sass */
 #nav a disabled:active {
   padding: 2px 8px;
   border-width: 1px;
 }
 
-/* line 79, sass/application.sass */
+/* line 89, sass/application.sass */
 #main_content {
   padding: 20px 40px;
 }
 
-/* line 82, sass/application.sass */
+/* line 92, sass/application.sass */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -99,25 +102,25 @@ a img {
   margin: 10px 0;
 }
 
-/* line 88, sass/application.sass */
+/* line 98, sass/application.sass */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 92, sass/application.sass */
+/* line 102, sass/application.sass */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 97, sass/application.sass */
+/* line 107, sass/application.sass */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 100, sass/application.sass */
+/* line 110, sass/application.sass */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -127,7 +130,7 @@ a img {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 109, sass/application.sass */
+/* line 119, sass/application.sass */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -137,11 +140,11 @@ a img {
   background-color: #cc0000;
   color: white;
 }
-/* line 118, sass/application.sass */
+/* line 128, sass/application.sass */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 120, sass/application.sass */
+/* line 130, sass/application.sass */
 .error_messages ul {
   margin: 0;
 }

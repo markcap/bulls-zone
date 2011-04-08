@@ -23,43 +23,53 @@ a
 #container
   width: 960px
   margin: 0 auto
+  margin-top: 60px
   background: white
   border: solid 1px black
 
-
-
-#menu
+#navbar
   // padding: 5px 10px
   border-bottom: 1px solid $secondary_color
+  width: 100%
+  background-color: $primary_color
+  height: 40px
+  position: fixed
+  z-index: 100
+  top: 0px
+  left: 0px
 
-#logo 
-  margin-bottom: -10px
-  display: inline
+#navbar_content
+  margin-left: 240px
+  padding-top: 3px
   
-#nav 
-  padding: 5px 20px
-  display: inline
-  margin-bottom: 10px
+#logo 
+  float: left
+
+#nav
+  padding: 4px 20px
   
   a
     margin: 0 
     display: inline-block
     cursor: pointer
     text-decoration: none
-    border-style: solid
     font-weight: bold
-    border-radius: 6px
-    -moz-border-radius: 6px
-    -webkit-border-radius: 6px
-    padding: 6px 14px
-    font-size: 14px
-    line-height: 12px
-    border-width: 2px
-    color: $third_color
-    background-color: $primary_color
-    border-color: $secondary_color
+    color: $secondary_color
+    padding-right: 15px
+    // border-style: solid
+    // border-radius: 6px
+    // -moz-border-radius: 6px
+    // -webkit-border-radius: 6px
+    padding: 3px 11px
+    // font-size: 14px
+    // line-height: 12px
+    // border-width: 2px
+    // color: $third_color
+    // background-color: $primary_color
+    // border-color: $secondary_color
     &:hover, &:active
-      background-color: $fourth_color
+      // background-color: $fourth_color
+      color: white
       
     ::-moz-focus-inner 
       border: none
