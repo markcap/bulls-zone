@@ -1,0 +1,8 @@
+- title "Account Info"
+
+#general_form
+  = render 'form', :user => @user
+  
+%p
+  = link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete
+

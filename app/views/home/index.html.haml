@@ -1,0 +1,37 @@
+dwadwa
+
+- if !user_signed_in?
+  #member_box
+    #member_box_header
+      Join Bulls Zone
+    #member_box_message
+      Sign up for Bulls Zone today and start engaging yourself in the Bulls social network today with fellow Bulls fans. It's free and easy so let's go!
+
+    #member_box_form
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| 
+        = devise_error_messages! 
+
+        = f.label :email 
+        = f.text_field :email 
+
+        / Password is changed by user after confirmation
+        - random_pw = ActiveSupport::SecureRandom.hex(10)
+        = f.hidden_field :password, :value => random_pw
+        = f.hidden_field :password_confirmation, :value => random_pw
+
+        = f.submit "Create Account" 
+        
+        %br
+        %br
+        \- or -
+        %br
+        .sign_in_button
+          <a href="/auth/twitter" class="auth_provider">
+          = image_tag "twitter.png", :alt => "Twitter"
+          </a>
+          
+        .sign_in_button
+          <a href="/auth/facebook" class="auth_provider">
+          = image_tag "facebook.png", :alt => "Facebook"
+          </a>
+ 

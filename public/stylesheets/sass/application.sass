@@ -26,6 +26,9 @@ a
   margin-top: 60px
   background: white
   border: solid 1px black
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  min-height: 600px
 
 #navbar
   // padding: 5px 10px
@@ -39,16 +42,20 @@ a
   left: 0px
 
 #navbar_content
-  margin-left: 240px
+  position: relative
+  margin: 0 auto
   padding-top: 3px
+  width: 960px
   
 #logo 
   float: left
+  margin-right: 20px
 
 #nav
   padding: 4px 20px
   
   a
+    font-size: 14px
     margin: 0 
     display: inline-block
     cursor: pointer
@@ -70,25 +77,98 @@ a
     &:hover, &:active
       // background-color: $fourth_color
       color: white
-      
-    ::-moz-focus-inner 
-      border: none
-      padding: 0
-    focus
-      outline: none
-    disabled:active
-      padding: 2px 8px  
-      border-width: 1px
-      
-
-    // hover, .tiny-button:focus { text-decoration: none; cursor: pointer; color: #fff; background-color: #85abd9; background: -webkit-gradient(linear, left top, left bottom, from(#aee595), to(#59b82d), color-stop(0.1, #76d34b), color-stop(0.5, #4b9b26), color-stop(0.5, #458f23)); background: -moz-linear-gradient(left top, left bottom, from(#aee595), to(#59b82d), color-stop(0.1, #76d34b), color-stop(0.5, #4b9b26), color-stop(0.5, #458f23)); border-color: #4379b9; }
-    // active {  padding: 1px 7px; border-width: 2px; color: #fff; background-color: #4379b9; background: -webkit-gradient(linear, left top, left bottom, from(#a4e288), to(#53ab2a), color-stop(0.1, #6cd03e), color-stop(0.5, #458e23), color-stop(0.5, #3f8220)); background: -moz-linear-gradient(left top, left bottom, from(#a4e288), to(#53ab2a), color-stop(0.1, #6cd03e), color-stop(0.5, #458e23), color-stop(0.5, #3f8220)); }
-
+    
     margin-right: 10px
 
+#nav_login, #nav_login a
+  float: right
+  font-size: 11px
+  font-weight: none
+  color: $primary_color
+  
+#nav_login_form
+  float: right
+  background-color: $secondary_color
+  color: $primary_color
+  padding: 10px
+  font-weight: bold
+  font-size: 10px
+  // border: 10px solid $third_color
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+  // visibility: hidden
+  
+  input
+    display: block
+    margin: 5px 0 10px 0
+  
+  input[type="checkbox"]
+    display: inline
+    margin-right: 5px
+  
 #main_content
   padding: 20px 40px
   
+  #member_box
+    margin-top: 20px
+    width: 35%
+    float: right
+    background-color: #ebe9ea
+    padding: 15px
+    border: 1px solid $fourth_color
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+    text-align: center
+  
+  #member_box_header
+    font-size: 32px
+    font-weight: bold
+    text-align: center
+    color: $fourth_color
+    margin-bottom: 20px
+    
+  #member_box_form
+    font-size: 18px
+    margin-top: 20px
+    
+    input[type="text"], input[type="password"]
+      display: block
+      margin: 5px 0 15px 0
+      font-size: 20px
+      width: 100%
+      -moz-border-radius: 10px
+      -webkit-border-radius: 10px
+      border-radius: 6px
+    
+    input[type="submit"]
+      width: 60%
+      height: 50px
+      font-size: 20px
+      
+    input[type="checkbox"]
+      display: inline
+      margin-right: 5px
+      
+    .sign_in_button
+
+      text-align: center
+      
+#general_form
+  
+  input[type="text"], input[type="password"], input[type="email"]
+    display: block
+    margin: 10px 0 20px 0
+    -moz-border-radius: 10px
+    -webkit-border-radius: 10px
+    border-radius: 6px
+    width: 230px
+  
+  input[type="submit"]
+    
+  input[type="checkbox"]
+    display: inline
+    margin-right: 5px
+    
 #flash_notice,
 #flash_error,
 #flash_alert

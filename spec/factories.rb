@@ -13,3 +13,11 @@ Factory.define :invalid_game, :parent => :game do |f|
   f.game_date nil
   f.game_time nil
 end
+
+Factory.define :user do |f|
+  f.email { Faker::Internet.email }
+  f.password { "secret1234" }
+  f.password_confirmation { |u| u.password }
+  f.sign_in_count { 2 }
+  f.confirmed_at { Date.today }
+end

@@ -5,9 +5,13 @@ class Ability
     
     if user.admin?
       can :manage, :all
+    elsif user
+      can :show, User, :id => user.id
+      can :update, User, :id => user.id
     else 
       can :index, Game
       can :show, Game
+      can :create, Authentication
     end
     # Define abilities for the passed in user here. For example:
     #

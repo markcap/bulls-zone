@@ -28,3 +28,5 @@ end
 
 require 'devise/test_helpers'
 include Devise::TestHelpers
+
+require "email_spec"

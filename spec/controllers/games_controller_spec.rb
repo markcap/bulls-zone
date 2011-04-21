@@ -3,10 +3,10 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe GamesController do
   render_views
 
-  # before :each do
-  #   @user = Factory(:user)
-  #   sign_in @user
-  # end
+  before :each do
+    @user = Factory(:user)
+    sign_in @user
+  end
   
   context '#index' do  
     it "index action should render index template" do

@@ -1,0 +1,25 @@
+- title @user.fullname
+
+%p
+  = @user.school.name
+
+%p
+  %strong Email:
+  = @user.email
+%p
+  %strong Roles:
+  - @user.roles.each do |role|
+    = role.name
+
+%p
+  - if can? (:edit, @user)
+    = link_to "Edit", edit_user_path(@user), :class => 'button'
+  - if can? (:destroy, @user)
+    = link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete, :class => 'button'
+    = link_to "View All", users_path, :class => 'button'
+
+%h2 Video Clips
+
+%ul
+- @user.video_clips.each do |clip|
+  %li= link_to nice_date(clip.taken_on), clip

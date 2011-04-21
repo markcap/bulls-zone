@@ -1,0 +1,14 @@
+- title "Users"
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Last Login
+  - for user in @users
+    %tr{ :class => cycle("odd", "even") }
+      %td=link_to user.fullname, user
+      %td= user.email
+      %td= nice_date(user.last_sign_in_at) unless user.last_sign_in_at.nil?
+
+%p= link_to "New User", new_user_path, :class => 'button'

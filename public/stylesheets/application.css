@@ -29,9 +29,12 @@ a img {
   margin-top: 60px;
   background: white;
   border: solid 1px black;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  min-height: 600px;
 }
 
-/* line 30, sass/application.sass */
+/* line 33, sass/application.sass */
 #navbar {
   border-bottom: 1px solid black;
   width: 100%;
@@ -43,23 +46,27 @@ a img {
   left: 0px;
 }
 
-/* line 41, sass/application.sass */
+/* line 44, sass/application.sass */
 #navbar_content {
-  margin-left: 240px;
+  position: relative;
+  margin: 0 auto;
   padding-top: 3px;
+  width: 960px;
 }
 
-/* line 45, sass/application.sass */
+/* line 50, sass/application.sass */
 #logo {
   float: left;
+  margin-right: 20px;
 }
 
-/* line 48, sass/application.sass */
+/* line 54, sass/application.sass */
 #nav {
   padding: 4px 20px;
 }
-/* line 51, sass/application.sass */
+/* line 57, sass/application.sass */
 #nav a {
+  font-size: 14px;
   margin: 0;
   display: inline-block;
   cursor: pointer;
@@ -70,31 +77,112 @@ a img {
   padding: 3px 11px;
   margin-right: 10px;
 }
-/* line 70, sass/application.sass */
+/* line 77, sass/application.sass */
 #nav a:hover, #nav a:active {
   color: white;
 }
-/* line 74, sass/application.sass */
-#nav a ::-moz-focus-inner {
-  border: none;
-  padding: 0;
-}
-/* line 77, sass/application.sass */
-#nav a focus {
-  outline: none;
-}
-/* line 79, sass/application.sass */
-#nav a disabled:active {
-  padding: 2px 8px;
-  border-width: 1px;
+
+/* line 83, sass/application.sass */
+#nav_login, #nav_login a {
+  float: right;
+  font-size: 11px;
+  font-weight: none;
+  color: #d70039;
 }
 
 /* line 89, sass/application.sass */
+#nav_login_form {
+  float: right;
+  background-color: black;
+  color: #d70039;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+/* line 101, sass/application.sass */
+#nav_login_form input {
+  display: block;
+  margin: 5px 0 10px 0;
+}
+/* line 105, sass/application.sass */
+#nav_login_form input[type="checkbox"] {
+  display: inline;
+  margin-right: 5px;
+}
+
+/* line 109, sass/application.sass */
 #main_content {
   padding: 20px 40px;
 }
+/* line 112, sass/application.sass */
+#main_content #member_box {
+  margin-top: 20px;
+  width: 35%;
+  float: right;
+  background-color: #ebe9ea;
+  padding: 15px;
+  border: 1px solid #990227;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-align: center;
+}
+/* line 123, sass/application.sass */
+#main_content #member_box_header {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #990227;
+  margin-bottom: 20px;
+}
+/* line 130, sass/application.sass */
+#main_content #member_box_form {
+  font-size: 18px;
+  margin-top: 20px;
+}
+/* line 134, sass/application.sass */
+#main_content #member_box_form input[type="text"], #main_content #member_box_form input[type="password"] {
+  display: block;
+  margin: 5px 0 15px 0;
+  font-size: 20px;
+  width: 100%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+}
+/* line 143, sass/application.sass */
+#main_content #member_box_form input[type="submit"] {
+  width: 60%;
+  height: 50px;
+  font-size: 20px;
+}
+/* line 148, sass/application.sass */
+#main_content #member_box_form input[type="checkbox"] {
+  display: inline;
+  margin-right: 5px;
+}
+/* line 152, sass/application.sass */
+#main_content #member_box_form .sign_in_button {
+  text-align: center;
+}
 
-/* line 92, sass/application.sass */
+/* line 158, sass/application.sass */
+#general_form input[type="text"], #general_form input[type="password"], #general_form input[type="email"] {
+  display: block;
+  margin: 10px 0 20px 0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+  width: 230px;
+}
+/* line 168, sass/application.sass */
+#general_form input[type="checkbox"] {
+  display: inline;
+  margin-right: 5px;
+}
+
+/* line 172, sass/application.sass */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -102,25 +190,25 @@ a img {
   margin: 10px 0;
 }
 
-/* line 98, sass/application.sass */
+/* line 178, sass/application.sass */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 102, sass/application.sass */
+/* line 182, sass/application.sass */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 107, sass/application.sass */
+/* line 187, sass/application.sass */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 110, sass/application.sass */
+/* line 190, sass/application.sass */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -130,7 +218,7 @@ a img {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 119, sass/application.sass */
+/* line 199, sass/application.sass */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -140,11 +228,11 @@ a img {
   background-color: #cc0000;
   color: white;
 }
-/* line 128, sass/application.sass */
+/* line 208, sass/application.sass */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 130, sass/application.sass */
+/* line 210, sass/application.sass */
 .error_messages ul {
   margin: 0;
 }
