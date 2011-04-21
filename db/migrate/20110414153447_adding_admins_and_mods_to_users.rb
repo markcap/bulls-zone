@@ -1,7 +1,7 @@
 class AddingAdminsAndModsToUsers < ActiveRecord::Migration
   def self.up
-    add_column :users, :admin, :tinyint
-    add_column :users, :moderator, :tinyint
+    add_column :users, :admin, :integer
+    add_column :users, :moderator, :integer
   end
 
   def self.down
