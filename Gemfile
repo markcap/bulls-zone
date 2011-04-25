@@ -11,7 +11,7 @@ gem 'cancan'
 gem 'compass'
 gem 'populator'
 gem 'omniauth'
-# gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
 group :development, :test do

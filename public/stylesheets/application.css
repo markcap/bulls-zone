@@ -153,16 +153,17 @@ a img {
 }
 /* line 143, sass/application.sass */
 #main_content #member_box_form input[type="submit"] {
+  -webkit-appearance: button;
   width: 60%;
   height: 50px;
   font-size: 20px;
 }
-/* line 148, sass/application.sass */
+/* line 149, sass/application.sass */
 #main_content #member_box_form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
 }
-/* line 152, sass/application.sass */
+/* line 153, sass/application.sass */
 #main_content #member_box_form .sign_in_button {
   text-align: center;
 }

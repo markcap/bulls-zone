@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 5406950be6fc3ece1cb7d1ffab2f966cd08db523
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 2.1.0)
+      rails (~> 3.0.6)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -221,6 +229,7 @@ DEPENDENCIES
   populator
   rails (= 3.0.6)
   rails-erd
+  rails_admin!
   rspec-rails
   simple_form
   webrat

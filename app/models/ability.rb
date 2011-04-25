@@ -5,6 +5,7 @@ class Ability
     
     if user.admin?
       can :manage, :all
+      can :access, :rails_admin
     elsif user
       can :show, User, :id => user.id
       can :update, User, :id => user.id
