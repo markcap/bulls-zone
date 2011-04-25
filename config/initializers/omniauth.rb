@@ -7,7 +7,7 @@ if Rails.env == "development"
 else
   Rails.application.config.middleware.use OmniAuth::Builder do
     provider :twitter, 'lA21uA4dz7BVDv18CuhVA', 'Z6ZLQewFa09YeJ6UCXfLegcwqrtMP0huNcIPJJkmt8'
-    provider :facebook, '162816310444184', 'e81605fb206c2b0c98b95ebfab3d7e92', {:scope => 'publish_stream,offline_access,email'}
+    provider :facebook, '162816310444184', 'e81605fb206c2b0c98b95ebfab3d7e92', {:client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}}}, {:scope => 'publish_stream,offline_access,email'}
   end
 end
 
