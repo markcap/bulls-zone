@@ -1,0 +1,12 @@
+- title "Chat"
+
+%ul#chat
+  - @chat_messages.each do |message|
+    %li
+      %span.created_at
+        = message.created_at.strftime("%H:%M")
+      = message.message
+
+= form_for ChatMessage.new, :remote => true do |f| 
+  = f.text_field :message 
+  = f.submit "Send" 

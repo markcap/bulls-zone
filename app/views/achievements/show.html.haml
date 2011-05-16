@@ -1,0 +1,18 @@
+- title "Achievement"
+
+%p
+  %strong Name:
+  = @achievement.name
+%p
+  %strong Points:
+  = @achievement.points
+%p
+  %strong Rank:
+  = @achievement.rank
+
+%p
+  = link_to "Edit", edit_achievement_path(@achievement)
+  |
+  = link_to "Destroy", @achievement, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", achievements_path

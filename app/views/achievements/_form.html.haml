@@ -1,0 +1,16 @@
+= form_for @achievement do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :points
+    %br
+    = f.text_field :points
+  %p
+    = f.label :rank
+    %br
+    = f.text_field :rank
+  %p
+    = f.submit

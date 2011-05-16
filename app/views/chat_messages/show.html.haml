@@ -1,0 +1,15 @@
+- title "Chat Message"
+
+%p
+  %strong User:
+  = @chat_message.user_id
+%p
+  %strong Message:
+  = @chat_message.message
+
+%p
+  = link_to "Edit", edit_chat_message_path(@chat_message)
+  |
+  = link_to "Destroy", @chat_message, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", chat_messages_path

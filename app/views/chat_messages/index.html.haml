@@ -1,0 +1,15 @@
+- title "Chat Messages"
+
+%table
+  %tr
+    %th User
+    %th Message
+  - for chat_message in @chat_messages
+    %tr
+      %td= chat_message.user_id
+      %td= chat_message.message
+      %td= link_to 'Show', chat_message
+      %td= link_to 'Edit', edit_chat_message_path(chat_message)
+      %td= link_to 'Destroy', chat_message, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Chat Message", new_chat_message_path
