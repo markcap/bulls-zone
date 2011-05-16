@@ -8,14 +8,15 @@ class AuthenticationsController < ApplicationController
     authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if authentication
       flash[:notice] = "Signed in successfully."
-      # sign_in_and_redirect(:user, authentication.user)
-      render :text => omniauth.to_yaml
+      sign_in_and_redirect(:user, authentication.user)
+      # render :text => omniauth.to_yaml
     elsif current_user
       current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
       flash[:notice] = "Authentication successful."
       redirect_to authentications_url
     else
-      user = User.new
+      temp_pw = ActiveSupport::SecureRandom.hex(10)
+      user = User.new(:password => temp_pw, :password_confirmation => temp_pw)
       user.apply_omniauth(omniauth)
       user.confirm!
       #bypassing validations for outside authentication

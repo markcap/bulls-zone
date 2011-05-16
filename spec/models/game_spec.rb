@@ -27,4 +27,16 @@ describe Game do
      game_2.should_not be_valid
   end
   
+  it "should require a score if game was in the past" do
+    game = Factory.build(:game, :game_date => Date.today - 1, :bulls_score => nil)
+    game.should_not be_valid
+  end
+  
+  it "should be able to pass in nil scores if game date is in the future or today" do
+    game1 = Factory.build(:game, :game_date => Date.today, :bulls_score => nil)
+    game2 = Factory.build(:game, :game_date => Date.today + 1, :bulls_score => nil)
+    game1.should be_valid
+    game2.should be_valid
+  end
+  
 end

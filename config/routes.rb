@@ -1,4 +1,8 @@
 Bulls::Application.routes.draw do
+  resources :chat_messages
+
+  resources :achievements
+
   resources :authentications
   
   match '/auth/:provider/callback' => 'authentications#create'
@@ -12,10 +16,10 @@ Bulls::Application.routes.draw do
   resources :home
 
   root :to => "home#index"
+  
+  match '/chat', :to => 'home#chat'
+  match '/error', :to => 'home#error'
+  match '/denied', :to => 'home#denied'
 
-  # See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end

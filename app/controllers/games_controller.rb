@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
   
-  # before_filter :authenticate_user!
-  # load_and_authorize_resource :game
+  before_filter :authenticate_user!, :except => [:show, :index]
+  load_and_authorize_resource :game
   
   def index
     @games = Game.all

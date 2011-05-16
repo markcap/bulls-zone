@@ -4,7 +4,7 @@ describe GamesController do
   render_views
 
   before :each do
-    @user = Factory(:user)
+    @user = Factory(:user, :admin => 1)
     sign_in @user
   end
   

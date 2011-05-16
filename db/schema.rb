@@ -10,12 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420194909) do
+ActiveRecord::Schema.define(:version => 20110515005020) do
+
+  create_table "achievements", :force => true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
     t.string   "provider"
     t.integer  "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chat_messages", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20110420194909) do
     t.datetime "updated_at"
     t.date     "game_date"
     t.time     "game_time"
+    t.integer  "bulls_score"
+    t.integer  "opponent_score"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -43,9 +60,9 @@ ActiveRecord::Schema.define(:version => 20110420194909) do
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "email"
+    t.string   "encrypted_password",   :limit => 128
+    t.string   "password_salt"
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -59,9 +76,10 @@ ActiveRecord::Schema.define(:version => 20110420194909) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.integer  "admin",                :limit => 1
-    t.integer  "moderator",            :limit => 1
+    t.integer  "admin"
+    t.integer  "moderator"
     t.string   "display_name"
+    t.integer  "bull_points"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

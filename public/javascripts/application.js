@@ -9,3 +9,10 @@ jQuery(document).ready(function() {
 				jQuery("#login_menu").fadeIn(500);
 	 		});
 });
+
+$(function() {
+  var faye = new Faye.Client('http://localhost:9292/faye');
+  faye.subscribe("/chat", function(data) {
+    eval(data);
+  });
+});

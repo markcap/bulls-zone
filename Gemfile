@@ -13,6 +13,12 @@ gem 'populator'
 gem 'omniauth'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
+#juggernaut
+# gem 'json'
+# gem 'eventmachine'
+# gem 'juggernaut'
+
+gem 'faye'
 
 group :development, :test do
   gem 'rspec-rails'

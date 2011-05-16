@@ -1,48 +1,9 @@
-- title "Games"
+- title "Schedule"
 
-%table
-  %tr
-    %th Game date
-    %th Opponent
-    %th Home away away away away away away away away away away away away away away away away away away away
-  - for game in @games
-    %tr
-      %td= game.game_date
-      %td= game.opponent
-      %td= game.home_away
-      %td= link_to 'Show', game
-      %td= link_to 'Edit', edit_game_path(game)
-      %td= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete
+- for game in @games
+  fuck
 
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
-%p= link_to "New Game", new_game_path
+
+- if can? :create, Game
+  %p= link_to "New Game", new_game_path
+
