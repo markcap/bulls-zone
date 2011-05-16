@@ -97,8 +97,6 @@ GEM
       thor (~> 0.14.4)
     json (1.5.1)
     json_pure (1.5.1)
-    juggernaut (2.0.1)
-      redis
     launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
@@ -181,7 +179,6 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
-    redis (2.2.0)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     rspec (2.5.0)
@@ -237,14 +234,11 @@ DEPENDENCIES
   compass
   devise
   email_spec
-  eventmachine
   factory_girl_rails
   faye
   ffaker (= 1.0.0)
   haml
   jquery-rails
-  json
-  juggernaut
   launchy
   mocha
   mysql2
