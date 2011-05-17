@@ -19,6 +19,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 # gem 'juggernaut'
 
 gem 'faye'
+gem 'pusher'
 
 group :development, :test do
   gem 'rspec-rails'

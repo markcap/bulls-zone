@@ -12,12 +12,14 @@ class ChatMessagesController < ApplicationController
   end
 
   def create
-    @chat_message = ChatMessage.create!(params[:chat_message])
-    # if @chat_message.save
-    #   redirect_to @chat_message, :notice => "Successfully created chat message."
-    # else
-    #   render :action => 'new'
-    # end
+    # @chat_message = ChatMessage.create!(params[:chat_message])
+    if !params[:chat_message][:message].blank?
+      Pusher['bulls_zone'].trigger('send_chat', {
+        :message => params[:chat_message][:message].to_s, 
+        :created_at => Time.now.strftime("%l:%M"),
+        :username => current_user.display_name
+      })
+    end
   end
 
   def edit

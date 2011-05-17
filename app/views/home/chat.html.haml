@@ -1,12 +1,16 @@
 - title "Chat"
 
-%ul#chat
-  - @chat_messages.each do |message|
-    %li
-      %span.created_at
-        = message.created_at.strftime("%H:%M")
-      = message.message
+=javascript_include_tag "http://js.pusherapp.com/1.8/pusher.min.js", "chat.js"
 
-= form_for ChatMessage.new, :remote => true do |f| 
-  = f.text_field :message 
-  = f.submit "Send" 
+#chat_room
+  %ul#chat
+    - @chat_messages.each do |message|
+      %li
+        %span.created_at
+          = message.created_at.strftime("%H:%M")
+        = message.message
+  
+#chat_input
+  = form_for ChatMessage.new, :remote => true do |f| 
+    = f.text_field :message 
+    = f.submit "Send" 

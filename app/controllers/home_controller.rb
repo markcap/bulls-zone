@@ -15,5 +15,6 @@ class HomeController < ApplicationController
   
   def chat
     @chat_messages = ChatMessage.all
+    
   end
 end

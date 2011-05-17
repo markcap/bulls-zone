@@ -10,9 +10,9 @@ jQuery(document).ready(function() {
 	 		});
 });
 
-$(function() {
-  var faye = new Faye.Client('http://localhost:9292/faye');
-  faye.subscribe("/chat", function(data) {
-    eval(data);
-  });
-});
+// $(function() {
+//   var faye = new Faye.Client('http://localhost:9292/faye');
+//   faye.subscribe("/chat", function(data) {
+//     eval(data);
+//   });
+// });

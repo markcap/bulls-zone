@@ -120,7 +120,7 @@ h1 {
 
 /* line 113, sass/application.sass */
 #main_content {
-  padding: 20px 40px;
+  padding: 10px 40px 20px 40px;
 }
 /* line 116, sass/application.sass */
 #main_content #member_box {
@@ -190,6 +190,40 @@ h1 {
 }
 
 /* line 176, sass/application.sass */
+#chat_room {
+  width: 90%;
+  margin: 0 auto;
+  height: 500px;
+  border: 1px black solid;
+  padding: 20px 5px 0 5px;
+  overflow: auto;
+}
+/* line 185, sass/application.sass */
+#chat_room ul#chat {
+  padding: 5px;
+}
+/* line 187, sass/application.sass */
+#chat_room li {
+  list-style: none;
+}
+
+/* line 190, sass/application.sass */
+#chat_input {
+  padding-top: 5px;
+  margin: 0 auto;
+  width: 91%;
+}
+/* line 194, sass/application.sass */
+#chat_input input[type="text"] {
+  font-size: 18px;
+  width: 90%;
+}
+/* line 198, sass/application.sass */
+#chat_input input[type="submit"] {
+  font-size: 16px;
+}
+
+/* line 202, sass/application.sass */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -197,25 +231,25 @@ h1 {
   margin: 10px 0;
 }
 
-/* line 182, sass/application.sass */
+/* line 208, sass/application.sass */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 186, sass/application.sass */
+/* line 212, sass/application.sass */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 191, sass/application.sass */
+/* line 217, sass/application.sass */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 194, sass/application.sass */
+/* line 220, sass/application.sass */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -225,7 +259,7 @@ h1 {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 203, sass/application.sass */
+/* line 229, sass/application.sass */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -235,11 +269,11 @@ h1 {
   background-color: #cc0000;
   color: white;
 }
-/* line 212, sass/application.sass */
+/* line 238, sass/application.sass */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 214, sass/application.sass */
+/* line 240, sass/application.sass */
 .error_messages ul {
   margin: 0;
 }
