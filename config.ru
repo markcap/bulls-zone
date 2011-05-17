@@ -2,5 +2,5 @@
 
 
 require ::File.expand_path('../config/environment',  __FILE__)
-use Faye::RackAdapter, :mount => '/faye' 
+# use Faye::RackAdapter, :mount => '/faye' 
 run Bulls::Application
