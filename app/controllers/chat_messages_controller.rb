@@ -22,7 +22,7 @@ class ChatMessagesController < ApplicationController
       Pusher['bulls_zone'].trigger('send_chat', {
         :message => params[:chat_message][:message].to_s, 
         :created_at => Time.now.strftime("%l:%M"),
-        :username => current_user.display_name.to_s
+        :username => (current_user.nil? ? "Guest" : current_user.display_name.to_s)
       })
     end
   end
