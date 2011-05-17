@@ -1,0 +1,11 @@
+development:
+  domain: http://bulls
+  faye: http://localhost:9292
+
+test:
+  domain: test.host
+  faye: http://localhost:9292
+
+production:
+  domain: http://bulls-zone.com
+  faye: http://bulls-zone.com:9292

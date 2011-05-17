@@ -1,8 +1,8 @@
-require 'pusher'
-
-Pusher.app_id = 5550
-Pusher.key = '106d110d7efa2719e789'
-Pusher.secret = '28fc280ef2ee43474944'
+# require 'pusher'
+# 
+# Pusher.app_id = 5550
+# Pusher.key = '106d110d7efa2719e789'
+# Pusher.secret = '28fc280ef2ee43474944'
 
 Bulls::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
