@@ -25,7 +25,7 @@
     
           #nav_login
             - if user_signed_in?
-              = link_to current_user.display_name, edit_user_path(current_user)
+              %span.menu_display_name= link_to current_user.display_name, edit_user_path(current_user)
               = link_to "Sign Out", destroy_user_session_path
             - else
               = link_to "Sign In/Sign Up!", new_user_session_path, :class => "nav_login_link"
@@ -50,3 +50,14 @@
       - if show_title?
         %h1= yield(:title)
       = yield
+    
+  #footer
+    Copyright Bulls Zone Inc. 
+    = Date.today.year 
+    all rights reserved
+    %br
+    = link_to "Contact", "#" 
+    | 
+    = link_to "Help", "#" 
+    | 
+    = link_to "Site Map", "#"

@@ -190,40 +190,103 @@ h1 {
 }
 
 /* line 176, sass/application.sass */
+#chat_user_list {
+  width: 19%;
+  float: right;
+  height: 510px;
+  border: 1px black solid;
+  padding-top: 10px;
+  overflow: auto;
+  font-size: 12px;
+  margin-right: 3%;
+}
+/* line 186, sass/application.sass */
+#chat_user_list #users_online_box {
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+/* line 190, sass/application.sass */
+#chat_user_list #users_online_box .users_online {
+  font-weight: bold;
+  padding-left: 5px;
+}
+/* line 194, sass/application.sass */
+#chat_user_list #user_list_box {
+  padding: 5px;
+}
+/* line 197, sass/application.sass */
+#chat_user_list #user_list_box ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* line 202, sass/application.sass */
 #chat_room {
-  width: 90%;
+  width: 72%;
   margin: 0 auto;
   height: 500px;
   border: 1px black solid;
   padding: 20px 5px 0 5px;
   overflow: auto;
+  font-size: 12px;
+  margin-left: 4%;
 }
-/* line 185, sass/application.sass */
+/* line 212, sass/application.sass */
+#chat_room .chat_username {
+  font-weight: bold;
+  margin-right: 3px;
+}
+/* line 216, sass/application.sass */
+#chat_room .chat_time {
+  font-size: 10px;
+  margin-right: 3px;
+}
+/* line 220, sass/application.sass */
+#chat_room .chat_notification {
+  font-style: italic;
+}
+/* line 223, sass/application.sass */
+#chat_room .disclaimer {
+  font-style: italic;
+  color: #990227;
+  padding: 0 30px 0 30px;
+}
+/* line 228, sass/application.sass */
 #chat_room ul#chat {
   padding: 5px;
 }
-/* line 187, sass/application.sass */
+/* line 230, sass/application.sass */
 #chat_room li {
   list-style: none;
+  margin-bottom: 3px;
 }
 
-/* line 190, sass/application.sass */
+/* line 234, sass/application.sass */
 #chat_input {
   padding-top: 5px;
   margin: 0 auto;
   width: 91%;
 }
-/* line 194, sass/application.sass */
+/* line 238, sass/application.sass */
 #chat_input input[type="text"] {
   font-size: 18px;
   width: 90%;
 }
-/* line 198, sass/application.sass */
+/* line 242, sass/application.sass */
 #chat_input input[type="submit"] {
   font-size: 16px;
 }
 
-/* line 202, sass/application.sass */
+/* line 245, sass/application.sass */
+#footer {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 251, sass/application.sass */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -231,25 +294,25 @@ h1 {
   margin: 10px 0;
 }
 
-/* line 208, sass/application.sass */
+/* line 257, sass/application.sass */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 212, sass/application.sass */
+/* line 261, sass/application.sass */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 217, sass/application.sass */
+/* line 266, sass/application.sass */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 220, sass/application.sass */
+/* line 269, sass/application.sass */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -259,7 +322,7 @@ h1 {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 229, sass/application.sass */
+/* line 278, sass/application.sass */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -269,11 +332,11 @@ h1 {
   background-color: #cc0000;
   color: white;
 }
-/* line 238, sass/application.sass */
+/* line 287, sass/application.sass */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 240, sass/application.sass */
+/* line 289, sass/application.sass */
 .error_messages ul {
   margin: 0;
 }

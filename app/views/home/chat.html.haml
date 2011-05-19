@@ -2,15 +2,29 @@
 
 =javascript_include_tag "http://js.pusherapp.com/1.8/pusher.min.js", "chat.js"
 
+#chat_user_list
+  #users_online_box
+    .users_online
+      %span.number_of_users
+        0
+      users online
+      
+  #user_list_box
+    %ul#users
+    
 #chat_room
+  .disclaimer
+    Welcome to the Bulls Zone chat! Feel free to engage in heated discussions about the Bulls, the NBA, the playoffs, how awesome D Rose is, etc. Try to be nice and have fun! If you want to join the discussion with an account,
+    = link_to "sign up", "#"
+    and join us.
   %ul#chat
-    - @chat_messages.each do |message|
-      %li
-        %span.created_at
-          = message.created_at.strftime("%H:%M")
-        = message.message
+    / - @chat_messages.each do |message|
+    /   %li
+    /     %span.created_at
+    /       = message.created_at.strftime("%H:%M")
+    /     = message.message
   
 #chat_input
   = form_for ChatMessage.new, :remote => true do |f| 
-    = f.text_field :message 
+    = f.text_field :message, :autocomplete => 'off'
     = f.submit "Send" 

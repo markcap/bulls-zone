@@ -20,6 +20,6 @@ Bulls::Application.routes.draw do
   match '/chat', :to => 'home#chat'
   match '/error', :to => 'home#error'
   match '/denied', :to => 'home#denied'
-
-
+  match 'pusher/auth', :to => 'pusher#auth'
+  
 end
