@@ -248,6 +248,7 @@ DEPENDENCIES
   ffaker (= 1.0.0)
   haml
   jquery-rails
+  json
   launchy
   mocha
   mysql2

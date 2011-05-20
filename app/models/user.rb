@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   def set_temp_display_name
     #for regular accounts
     if !display_name
-      display_name = "BZ FAN " + rand(100000).to_s
+      display_name = "Bulls Fan " + id.to_s
     end
   end
   
