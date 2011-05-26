@@ -22,13 +22,26 @@ h1 {
 }
 
 /* line 22, sass/application.sass */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 26, sass/application.sass */
+abbr {
+  color: red;
+  border: 0;
+  font-size: 11px;
+}
+
+/* line 31, sass/application.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 27, sass/application.sass */
+/* line 36, sass/application.sass */
 #container {
   width: 960px;
   margin: 0 auto;
@@ -40,7 +53,7 @@ h1 {
   min-height: 600px;
 }
 
-/* line 37, sass/application.sass */
+/* line 46, sass/application.sass */
 #navbar {
   border-bottom: 1px solid black;
   width: 100%;
@@ -52,7 +65,7 @@ h1 {
   left: 0px;
 }
 
-/* line 48, sass/application.sass */
+/* line 57, sass/application.sass */
 #navbar_content {
   position: relative;
   margin: 0 auto;
@@ -60,17 +73,17 @@ h1 {
   width: 960px;
 }
 
-/* line 54, sass/application.sass */
+/* line 63, sass/application.sass */
 #logo {
   float: left;
   margin-right: 20px;
 }
 
-/* line 58, sass/application.sass */
+/* line 67, sass/application.sass */
 #nav {
   padding: 4px 20px;
 }
-/* line 61, sass/application.sass */
+/* line 70, sass/application.sass */
 #nav a {
   font-size: 14px;
   margin: 0;
@@ -83,12 +96,12 @@ h1 {
   padding: 3px 11px;
   margin-right: 10px;
 }
-/* line 81, sass/application.sass */
+/* line 90, sass/application.sass */
 #nav a:hover, #nav a:active {
   color: white;
 }
 
-/* line 87, sass/application.sass */
+/* line 96, sass/application.sass */
 #nav_login, #nav_login a {
   float: right;
   font-size: 11px;
@@ -96,7 +109,7 @@ h1 {
   color: #d70039;
 }
 
-/* line 93, sass/application.sass */
+/* line 102, sass/application.sass */
 #nav_login_form {
   float: right;
   background-color: black;
@@ -107,22 +120,22 @@ h1 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }
-/* line 105, sass/application.sass */
+/* line 114, sass/application.sass */
 #nav_login_form input {
   display: block;
   margin: 5px 0 10px 0;
 }
-/* line 109, sass/application.sass */
+/* line 118, sass/application.sass */
 #nav_login_form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
 }
 
-/* line 113, sass/application.sass */
+/* line 122, sass/application.sass */
 #main_content {
   padding: 10px 40px 20px 40px;
 }
-/* line 116, sass/application.sass */
+/* line 125, sass/application.sass */
 #main_content #member_box {
   margin-top: 20px;
   width: 35%;
@@ -134,7 +147,7 @@ h1 {
   -webkit-border-radius: 10px;
   text-align: center;
 }
-/* line 127, sass/application.sass */
+/* line 136, sass/application.sass */
 #main_content #member_box_header {
   font-size: 32px;
   font-weight: bold;
@@ -142,12 +155,12 @@ h1 {
   color: #990227;
   margin-bottom: 20px;
 }
-/* line 134, sass/application.sass */
+/* line 143, sass/application.sass */
 #main_content #member_box_form {
   font-size: 18px;
   margin-top: 20px;
 }
-/* line 138, sass/application.sass */
+/* line 147, sass/application.sass */
 #main_content #member_box_form input[type="text"], #main_content #member_box_form input[type="password"] {
   display: block;
   margin: 5px 0 15px 0;
@@ -157,24 +170,24 @@ h1 {
   -webkit-border-radius: 10px;
   border-radius: 6px;
 }
-/* line 147, sass/application.sass */
+/* line 156, sass/application.sass */
 #main_content #member_box_form input[type="submit"] {
   -webkit-appearance: button;
   width: 60%;
   height: 50px;
   font-size: 20px;
 }
-/* line 153, sass/application.sass */
+/* line 162, sass/application.sass */
 #main_content #member_box_form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
 }
-/* line 157, sass/application.sass */
+/* line 166, sass/application.sass */
 #main_content #member_box_form .sign_in_button {
   text-align: center;
 }
 
-/* line 162, sass/application.sass */
+/* line 171, sass/application.sass */
 #general_form input[type="text"], #general_form input[type="password"], #general_form input[type="email"] {
   display: block;
   margin: 10px 0 20px 0;
@@ -183,13 +196,13 @@ h1 {
   border-radius: 6px;
   width: 230px;
 }
-/* line 172, sass/application.sass */
+/* line 181, sass/application.sass */
 #general_form input[type="checkbox"] {
   display: inline;
   margin-right: 5px;
 }
 
-/* line 176, sass/application.sass */
+/* line 185, sass/application.sass */
 #chat_user_list {
   width: 19%;
   float: right;
@@ -200,28 +213,28 @@ h1 {
   font-size: 12px;
   margin-right: 3%;
 }
-/* line 186, sass/application.sass */
+/* line 195, sass/application.sass */
 #chat_user_list #users_online_box {
   padding-bottom: 5px;
   border-bottom: 1px solid black;
 }
-/* line 190, sass/application.sass */
+/* line 199, sass/application.sass */
 #chat_user_list #users_online_box .users_online {
   font-weight: bold;
   padding-left: 5px;
 }
-/* line 194, sass/application.sass */
+/* line 203, sass/application.sass */
 #chat_user_list #user_list_box {
   padding: 5px;
 }
-/* line 197, sass/application.sass */
+/* line 206, sass/application.sass */
 #chat_user_list #user_list_box ul {
   list-style: none;
   padding: 0;
   font-weight: bold;
 }
 
-/* line 202, sass/application.sass */
+/* line 211, sass/application.sass */
 #chat_room {
   width: 72%;
   margin: 0 auto;
@@ -232,53 +245,53 @@ h1 {
   font-size: 12px;
   margin-left: 4%;
 }
-/* line 212, sass/application.sass */
+/* line 221, sass/application.sass */
 #chat_room .chat_username {
   font-weight: bold;
   margin-right: 3px;
 }
-/* line 216, sass/application.sass */
+/* line 225, sass/application.sass */
 #chat_room .chat_time {
   font-size: 10px;
   margin-right: 3px;
 }
-/* line 220, sass/application.sass */
+/* line 229, sass/application.sass */
 #chat_room .chat_notification {
   font-style: italic;
 }
-/* line 223, sass/application.sass */
+/* line 232, sass/application.sass */
 #chat_room .disclaimer {
   font-style: italic;
   color: #990227;
   padding: 0 30px 0 30px;
 }
-/* line 228, sass/application.sass */
+/* line 237, sass/application.sass */
 #chat_room ul#chat {
   padding: 5px;
 }
-/* line 230, sass/application.sass */
+/* line 239, sass/application.sass */
 #chat_room li {
   list-style: none;
   margin-bottom: 3px;
 }
 
-/* line 234, sass/application.sass */
+/* line 243, sass/application.sass */
 #chat_input {
   padding-top: 5px;
   margin: 0 auto;
   width: 91%;
 }
-/* line 238, sass/application.sass */
+/* line 247, sass/application.sass */
 #chat_input input[type="text"] {
   font-size: 18px;
   width: 90%;
 }
-/* line 242, sass/application.sass */
+/* line 251, sass/application.sass */
 #chat_input input[type="submit"] {
   font-size: 16px;
 }
 
-/* line 245, sass/application.sass */
+/* line 254, sass/application.sass */
 #footer {
   font-size: 10px;
   text-align: center;
@@ -286,7 +299,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* line 251, sass/application.sass */
+/* line 260, sass/application.sass */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -294,25 +307,25 @@ h1 {
   margin: 10px 0;
 }
 
-/* line 257, sass/application.sass */
+/* line 266, sass/application.sass */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 261, sass/application.sass */
+/* line 270, sass/application.sass */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 266, sass/application.sass */
+/* line 275, sass/application.sass */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 269, sass/application.sass */
+/* line 278, sass/application.sass */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -322,7 +335,7 @@ h1 {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 278, sass/application.sass */
+/* line 287, sass/application.sass */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -332,11 +345,16 @@ h1 {
   background-color: #cc0000;
   color: white;
 }
-/* line 287, sass/application.sass */
+/* line 296, sass/application.sass */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 289, sass/application.sass */
+/* line 298, sass/application.sass */
 .error_messages ul {
   margin: 0;
+}
+
+/* line 302, sass/application.sass */
+#blog_form input, #blog_form textarea {
+  margin-bottom: 20px;
 }

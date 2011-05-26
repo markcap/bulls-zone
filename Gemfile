@@ -5,20 +5,17 @@ gem "nifty-generators"
 gem "devise"
 gem 'mysql2'
 gem 'haml'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 1.0.3'
 gem 'simple_form'
 gem 'cancan'
 gem 'compass'
 gem 'populator'
 gem 'omniauth'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-
-#juggernaut
-# gem 'json'
-# gem 'eventmachine'
-# gem 'juggernaut'
-
-gem 'faye'
+gem 'acts_as_commentable'
+gem 'ckeditor', '3.2.3'
+gem "paperclip", "~> 2.3"
+gem 'sanitize'
 gem 'pusher'
 gem 'json'
 

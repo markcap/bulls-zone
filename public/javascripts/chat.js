@@ -7,17 +7,36 @@ jQuery(document).ready(function() {
   });
 });
 
-// Enable pusher logging - don't include this in production
-Pusher.log = function(message) {
-  if (window.console && window.console.log) window.console.log(message);
-};
+// // Enable pusher logging - don't include this in production
+// Pusher.log = function(message) {
+//   if (window.console && window.console.log) window.console.log(message);
+// };
+// 
+// // Flash fallback logging - don't include this in production
+// WEB_SOCKET_DEBUG = true;
 
-// Flash fallback logging - don't include this in production
-WEB_SOCKET_DEBUG = true;
-
-var pusher = new Pusher('106d110d7efa2719e789'); // uses your API KEY
+var pusher = new Pusher('106d110d7efa2719e789');
 var channel = pusher.subscribe('presence-bulls_zone');
-// var pres_channel = pusher.subscribe('presence-bulls_zone')
+
+
+channel.bind('pusher:subscription_succeeded', function(members) {
+  members.each(function(member) {
+    add_member(member);
+  })
+  order_list();
+})
+
+channel.bind('pusher:member_added', function(member){
+   add_member(member);
+   send_notification(member.info.name + ' has enetered the room.');
+   order_list();
+})
+ 
+channel.bind('pusher:member_removed', function(member){
+    $(".number_of_users").text(parseInt($(".number_of_users").text()) - 1);
+    $("#users li." + member.info.name).remove();
+    send_notification(member.info.name + ' has left the room.')
+})
 
 // Send a chat message
 channel.bind('send_chat', function(data) {
@@ -37,30 +56,33 @@ channel.bind('send_notification', function(data) {
   }
 });
 
-channel.bind('add_user', function(data) {
-  $(".number_of_users").html(parseInt($(".number_of_users").text()) + 1);
-  $("#users").append('<li class=\'' + data.username + '\'><span class=\'' + data.user_type + '\'>' + data.username + '</span></li>');
-});
-
-channel.bind('client-remove_user', function(data) {
-  $(".number_of_users").html(parseInt($(".number_of_users").html()) - 1);
-  $("." + data.username).remove();
-  $("#chat").append('<span class="chat_notification"> ' + data.username + ' has left the room.</span></li>');
-});
-
 // 
-// pres_channel.bind('pusher:subscription_succeeded', function(members) {
-//   // for example
-//   update_member_count(members.count);
-// 
-//   members.each(function(member) {
-//     // for example:
-//     add_member(member.id, member.info);
-//   })
-// })
+// channel.bind('client-remove_user', function(data) {
+//   $(".number_of_users").html(parseInt($(".number_of_users").html()) - 1);
+//   $("." + data.username).remove();
+//   $("#chat").append('<span class="chat_notification"> ' + data.username + ' has left the room.</span></li>');
+// });
 
-// Change user count when someone leaves
-window.onbeforeunload = function () {
-  var name = $(".menu_display_name").text();
-  channel.trigger('client-remove_user', {username: name});
+function add_member(member) {
+  $("#users").append('<li class=\'' + member.info.name + '\'><span class=\'' + member.info.name + '\'>' + member.info.name + '</span></li>');
+  $(".number_of_users").text(parseInt($(".number_of_users").text()) + 1);
+}
+
+function send_notification(string) {
+  obj = $("#chat_room");
+  $("#chat").append('<li><span class="chat_notification"> ' + string + '</span></li>');
+  if( (obj.scrollTop() + 35) > (obj[0].scrollHeight - obj[0].offsetHeight)) {
+    $("#chat_room").attr({ scrollTop: $("#chat_room").attr("scrollHeight") });
+  }
+}
+
+function order_list() {
+   var mylist = $('#users');
+   var listitems = mylist.children('li').get();
+   listitems.sort(function(a, b) {
+      var compA = $(a).attr("class").toUpperCase();
+      var compB = $(b).attr("class").toUpperCase();
+      return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+   })
+   $.each(listitems, function(idx, itm) { mylist.append(itm); });
 }

@@ -1,0 +1,14 @@
+= javascript_include_tag 'ckeditor/ckeditor.js'
+
+
+#blog_form
+  = simple_form_for @article do |f| 
+    = f.error_messages 
+
+    = f.input :subject, :as => 'string', :input_html => {:size => 95}
+    = f.input :abstract, :input_html => { :cols => 85, :rows => 8 }
+    = f.label :body
+    = ckeditor_textarea :article, :body, :width => '80%'
+  
+  
+    %p= f.submit

@@ -21,16 +21,7 @@ class HomeController < ApplicationController
       else
         user_type = "normal"
       end
-  
-      Pusher['presence-bulls_zone'].trigger('send_notification', {
-        :message =>  (current_user.nil? ? "Guest" : current_user.display_name.to_s) + " has entered the room.",
-        :created_at => Time.now.strftime("%l:%M")
-      })
-    
-      Pusher['presence-bulls_zone'].trigger('add_user', {
-        :username => (current_user.nil? ? "Guest" : current_user.display_name.to_s), 
-        :user_type => user_type
-      })
+
     end
   end
     

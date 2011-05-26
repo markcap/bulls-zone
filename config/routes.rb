@@ -1,4 +1,6 @@
 Bulls::Application.routes.draw do
+  resources :articles
+
   resources :chat_messages
 
   resources :achievements

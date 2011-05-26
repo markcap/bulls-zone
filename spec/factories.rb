@@ -1,5 +1,12 @@
 require 'ffaker'
 
+Factory.define :article do |f|
+  f.association :user
+  f.subject {Faker::Lorem.sentence}
+  f.abstract {Faker::Lorem.sentence}
+  f.body {Faker::Lorem.paragraph}
+end
+
 Factory.define :authentication do |f|
   f.association :user
   f.provider {["Twitter", "Facebook"][rand(2)]}
@@ -28,5 +35,5 @@ Factory.define :user do |f|
   f.password_confirmation { |u| u.password }
   f.sign_in_count { 2 }
   f.confirmed_at { Date.today }
-  f.display_name {"Testuser"}
+  f.display_name {rand(9999999).to_s}
 end

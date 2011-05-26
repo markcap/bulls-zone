@@ -3,18 +3,21 @@ class Ability
 
   def initialize(user)
     
-    can :index, Game
-    can :show, Game
     
     user ||= User.new
+    
     if user.admin?
       can :manage, :all
       can :access, :rails_admin
-    else
-      can :show, User, :id => user.id
-      can :update, User, :id => user.id
+    end
+    
+    if user.moderator?
+      can :manage, Article
     end
 
+    can [:show, :index], [Game, Article]
+    can :show, User, :id => user.id
+    can :update, User, :id => user.id
     
     # Define abilities for the passed in user here. For example:
     #

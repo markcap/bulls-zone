@@ -1,0 +1,28 @@
+<% title "Article" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @article.user_id %>
+</p>
+<p>
+  <strong>Subject:</strong>
+  <%= @article.subject %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+<p>
+  <strong>Abstract:</strong>
+  <%= @article.abstract %>
+</p>
+<p>
+  <strong>Publish:</strong>
+  <%= @article.publish %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Destroy", @article, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", articles_path %>
+</p>

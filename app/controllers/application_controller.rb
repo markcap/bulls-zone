@@ -19,4 +19,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def handle_unverified_request
+    #for the pusher presence channel. Javascript Ajax calls with csrf headers won't work in this case. 
+    content_mime_type = request.respond_to?(:content_mime_type) ? request.content_mime_type : request.content_type
+    if content_mime_type && content_mime_type.verify_request?
+      if request.path != "/pusher/auth"
+        raise ActionController::InvalidAuthenticityToken
+      end
+    else
+      super
+      cookies.delete 'remember_user_token'
+      sign_out :user
+    end
+  end
 end
